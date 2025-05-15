@@ -201,10 +201,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&caps_word  &trans  &kp HOME  &kp UP                &kp END    &kp PG_UP           &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans      &trans  &kp LEFT  &kp DOWN              &kp RIGHT  &kp PG_DN           &kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &trans
-&trans      &trans  &kp F5    &kp F10               &kp F11    &kp F12             &kp F8   &trans  &trans  &trans  &trans  &kp LEFT_ALT
-                              &kp LA(LC(UP_ARROW))  &trans     &kp LA(LC(DOWN))    &kp RET  &trans  &trans
+&caps_word  &kp HOME  &kp UP    &kp END               &kp PG_UP  &trans              &kp N6   &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans      &kp LEFT  &kp DOWN  &kp RIGHT             &kp PG_DN  &trans              &kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &trans
+&trans      &trans    &kp F5    &kp F10               &kp F11    &kp F12             &kp F8   &trans  &trans  &trans  &trans  &kp LEFT_ALT
+                                &kp LA(LC(UP_ARROW))  &trans     &kp LA(LC(DOWN))    &kp RET  &trans  &trans
             >;
         };
 
