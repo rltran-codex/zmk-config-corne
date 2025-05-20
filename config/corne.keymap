@@ -40,33 +40,6 @@
         // keys.
         // Further optimization using urob's timerless homerow mods method:
         // https://github.com/urob/zmk-config#timeless-homerow-mods
-
-        hm_l: homerow_mods_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
-            hold-trigger-on-release;
-        };
-
-        hm_r: homerow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
-            hold-trigger-on-release;
-        };
-
         // Positional Homerow mods for shift
         // Use faster tapping term and disable some features that may
         // cause false negatives.
@@ -77,12 +50,16 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            //quick-tap-ms = <125>;
-            require-prior-idle-ms = <105>;
-            // hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            tapping-term-ms = <190>;
 
+            //quick-tap-ms = <125>;
+
+            require-prior-idle-ms = <105>;
+
+            // hold-trigger-key-positions = <KEYS_R KEYS_T>;
             // hold-trigger-on-release;
+
+            quick-tap-ms = <135>;
         };
 
         hm_shift_r: hm_shift_r {
@@ -91,12 +68,16 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            //quick-tap-ms = <125>;
-            require-prior-idle-ms = <105>;
-            // hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            tapping-term-ms = <190>;
 
+            //quick-tap-ms = <125>;
+
+            require-prior-idle-ms = <105>;
+
+            // hold-trigger-key-positions = <KEYS_L KEYS_T>;
             // hold-trigger-on-release;
+
+            quick-tap-ms = <135>;
         };
 
         // Positional Homerow mods
