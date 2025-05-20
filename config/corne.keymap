@@ -76,11 +76,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
-            flavor = "balanced";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            //quick-tap-ms = <125>;
+            require-prior-idle-ms = <105>;
+            // hold-trigger-key-positions = <KEYS_R KEYS_T>;
 
             // hold-trigger-on-release;
         };
@@ -90,11 +90,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
-            flavor = "balanced";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            //quick-tap-ms = <125>;
+            require-prior-idle-ms = <105>;
+            // hold-trigger-key-positions = <KEYS_L KEYS_T>;
 
             // hold-trigger-on-release;
         };
