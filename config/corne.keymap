@@ -139,6 +139,62 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
+        vscode_left_editor: vscode_left_editor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp K>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>;
+
+            label = "vscode_left_editor";
+        };
+
+        vscode_right_editor: vscode_right_editor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp K>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>;
+
+            label = "VSCODE_RIGHT_EDITOR";
+        };
+
+        vscode_term_new: vscode_split_editor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp TILDE>,
+                <&macro_release>;
+
+            label = "VSCODE_SPLIT_EDITOR";
+        };
+
+        vscode_term_show: vscode_term_show {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp TILDE>,
+                <&macro_release>;
+
+            label = "VSCODE_TERM_SHOW";
+        };
     };
 
     combos {
@@ -151,7 +207,7 @@
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <15 20>;
+            key-positions = <20 15>;
         };
 
         perc {
@@ -201,7 +257,7 @@
 
         underscore {
             bindings = <&kp UNDER>;
-            key-positions = <30 18>;
+            key-positions = <6 18>;
         };
 
         leftbrack {
@@ -296,13 +352,13 @@
             >;
         };
 
-        NUMPAD {
-            display-name = "Numpad";
+        func {
+            display-name = "func";
             bindings = <
-&trans      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0       &trans
-&caps_word  &trans  &kp N6  &kp N5  &kp N4  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans       &trans
-&trans      &trans  &kp N3  &kp N2  &kp N1  &kp N0    &kp N0  &kp N1  &kp N2  &kp N3  &bootloader  &trans
-                            &trans  &trans  &trans    &trans  &trans  &trans
+&trans      &trans  &trans  &vscode_term_new  &trans  &vscode_term_show    &trans  &vscode_left_editor  &trans   &vscode_right_editor  &trans   &trans
+&caps_word  &trans  &trans  &trans            &trans  &trans               &trans  &trans               &trans   &trans                &trans   &trans
+&trans      &trans  &trans  &trans            &trans  &kp F9               &kp F8  &kp F5               &kp F10  &kp F11               &kp F12  &trans
+                            &trans            &trans  &trans               &trans  &trans               &trans
             >;
         };
 
