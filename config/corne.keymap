@@ -150,7 +150,8 @@
                 <&kp K>,
                 <&macro_tap>,
                 <&kp LEFT>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
 
             label = "vscode_left_editor";
         };
@@ -165,7 +166,8 @@
                 <&kp K>,
                 <&macro_tap>,
                 <&kp RIGHT>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
 
             label = "VSCODE_RIGHT_EDITOR";
         };
@@ -178,7 +180,8 @@
                 <&kp LEFT_CONTROL &kp LEFT_SHIFT>,
                 <&macro_tap>,
                 <&kp TILDE>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
 
             label = "VSCODE_SPLIT_EDITOR";
         };
@@ -191,7 +194,8 @@
                 <&kp LEFT_CONTROL>,
                 <&macro_tap>,
                 <&kp TILDE>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
 
             label = "VSCODE_TERM_SHOW";
         };
