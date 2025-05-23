@@ -171,34 +171,6 @@
 
             label = "VSCODE_RIGHT_EDITOR";
         };
-
-        vscode_term_new: vscode_split_editor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp TILDE>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
-
-            label = "VSCODE_SPLIT_EDITOR";
-        };
-
-        vscode_term_show: vscode_term_show {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp TILDE>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
-
-            label = "VSCODE_TERM_SHOW";
-        };
     };
 
     combos {
@@ -359,10 +331,10 @@
         func {
             display-name = "func";
             bindings = <
-&trans      &trans  &trans  &vscode_term_new  &trans  &vscode_term_show    &trans  &vscode_left_editor  &trans   &vscode_right_editor  &trans   &trans
-&caps_word  &trans  &trans  &trans            &trans  &trans               &trans  &trans               &trans   &trans                &trans   &trans
-&trans      &trans  &trans  &trans            &trans  &kp F9               &kp F8  &kp F5               &kp F10  &kp F11               &kp F12  &trans
-                            &trans            &trans  &trans               &trans  &trans               &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &trans  &vscode_left_editor  &trans   &vscode_right_editor  &trans   &trans
+&caps_word  &trans  &trans  &trans  &trans  &trans    &trans  &trans               &trans   &trans                &trans   &trans
+&trans      &trans  &trans  &trans  &trans  &kp F9    &kp F8  &kp F5               &kp F10  &kp F11               &kp F12  &trans
+                            &trans  &trans  &trans    &trans  &trans               &trans
             >;
         };
 
