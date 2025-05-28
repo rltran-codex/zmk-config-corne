@@ -181,11 +181,6 @@
             key-positions = <13 17>;
         };
 
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <20 15>;
-        };
-
         perc {
             bindings = <&kp PERCENT>;
             key-positions = <5 17>;
