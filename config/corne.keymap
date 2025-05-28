@@ -304,10 +304,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp ESC  &trans  &kp PG_UP  &kp UP    &kp PG_DN  &trans     &kp N7           &kp N8                &kp N9                      &kp N0  &trans  &trans
-&trans   &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans     &kp N4           &hm RIGHT_CONTROL N5  &hm_shift_r RIGHT_SHIFT N6  &trans  &trans  &kp DEL
-&trans   &trans  &trans     &trans    &kp HOME   &kp END    &mt N0 NUMBER_1  &kp N2                &kp N3                      &trans  &trans  &trans
-                            &trans    &trans     &trans     &trans           &trans                &trans
+&kp ESC  &trans  &kp PG_UP  &kp UP    &kp PG_DN  &trans     &none   &kp N7                &kp N8                      &kp N9            &kp N0      &trans
+&trans   &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans     &none   &hm RIGHT_CONTROL N4  &hm_shift_r RIGHT_SHIFT N5  &hm N6 RIGHT_ALT  &trans      &kp DEL
+&trans   &trans  &trans     &trans    &kp HOME   &kp END    &none   &mt N0 N1             &kp N2                      &kp N3            &kp KP_DOT  &trans
+                            &trans    &trans     &trans     &trans  &trans                &trans
             >;
         };
 
