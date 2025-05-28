@@ -306,7 +306,7 @@
             bindings = <
 &kp ESC  &trans  &kp PG_UP  &kp UP    &kp PG_DN  &trans     &none   &kp N7                &kp N8                      &kp N9                  &kp N0      &trans
 &trans   &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans     &none   &hm RIGHT_CONTROL N4  &hm_shift_r RIGHT_SHIFT N5  &hm RIGHT_ALT NUMBER_6  &trans      &kp DEL
-&trans   &trans  &trans     &trans    &kp HOME   &kp END    &none   &mt N0 N1             &kp N2                      &kp N3                  &kp KP_DOT  &trans
+&trans   &trans  &trans     &trans    &kp HOME   &kp END    &none   &mt N0 N1             &kp N2                      &kp N3                  &kp PERIOD  &trans
                             &trans    &trans     &trans     &trans  &trans                &trans
             >;
         };
