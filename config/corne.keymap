@@ -350,10 +350,10 @@
         func {
             display-name = "func";
             bindings = <
-&trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP      &vscode_left_editor  &vscode_right_editor  &trans      &trans  &kp F5   &kp F10
-&caps   &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans               &trans                &trans      &trans  &kp F11  &kp F12
-&trans  &trans  &trans          &trans          &clip_history    &none             &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp C_MUTE  &trans  &kp F9   &trans
-                                &kp INS         &trans           &trans            &trans               &trans                &trans
+&trans  &mkp RCLK  &trans          &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP      &vscode_left_editor  &vscode_right_editor  &trans      &trans  &kp F5   &kp F10
+&caps   &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans               &trans                &trans      &trans  &kp F11  &kp F12
+&trans  &trans     &trans          &trans          &clip_history    &none             &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp C_MUTE  &trans  &kp F9   &trans
+                                   &kp INS         &trans           &trans            &trans               &trans                &trans
             >;
         };
 
