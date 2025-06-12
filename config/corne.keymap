@@ -172,6 +172,19 @@
 
             label = "VSCODE_RIGHT_EDITOR";
         };
+
+        clip_history: clip_history {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>;
+
+            label = "CLIP_HISTORY";
+        };
     };
 
     combos {
@@ -322,20 +335,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPERSAND     &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans     &trans    &trans  &trans    &trans    &kp MINUS    &kp PLUS   &kp LEFT_BRACKET  &kp COLON  &kp RIGHT_BRACKET     &kp BACKSLASH          &trans
-&trans     &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp LEFT_BRACE    &kp EQUAL  &kp RIGHT_BRACE       &kp PIPE               &trans
-                             &kp LGUI  &trans    &trans       &trans     &trans            &trans
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPERSAND                   &kp STAR                       &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS  &trans
+&kp TILDE  &trans    &trans  &trans    &trans    &kp MINUS    &kp PLUS   &hm RIGHT_CONTROL LEFT_BRACKET  &hm_shift_r RIGHT_SHIFT COLON  &hm RIGHT_ALT RIGHT_BRACKET  &kp BACKSLASH          &trans
+&trans     &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp LEFT_BRACE                  &kp EQUAL                      &kp RIGHT_BRACE              &kp PIPE               &trans
+                             &kp LGUI  &trans    &trans       &trans     &trans                          &trans
             >;
         };
 
         func {
             display-name = "func";
             bindings = <
-&trans      &trans  &trans          &mmv MOVE_UP    &trans           &mkp LCLK    &vscode_left_editor  &vscode_right_editor  &trans      &trans  &kp F5   &kp F10
-&caps_word  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &trans               &trans                &trans      &trans  &kp F11  &kp F12
-&trans      &trans  &trans          &trans          &trans           &mkp RCLK    &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp K_MUTE  &trans  &kp F9   &trans
-                                    &kp INS         &trans           &trans       &trans               &trans                &trans
+&trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP      &vscode_left_editor  &vscode_right_editor  &trans      &trans  &kp F5   &kp F10
+&caps   &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans               &trans                &trans      &trans  &kp F11  &kp F12
+&trans  &trans  &trans          &trans          &clip_history    &none             &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp C_MUTE  &trans  &kp F9   &trans
+                                &kp INS         &trans           &trans            &trans               &trans                &trans
             >;
         };
 
