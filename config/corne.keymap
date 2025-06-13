@@ -202,9 +202,8 @@
                 <&macro_release>,
                 <&kp LEFT_WIN>,
                 <&macro_wait_time 50>,
-                <&kp P &kp O &kp W &kp E &kp R &kp S &kp H &kp E &kp L &kp L>,
                 <&macro_tap>,
-                <&kp ENTER>;
+                <&kp P &kp O &kp W &kp E &kp R &kp S &kp H &kp E &kp L &kp L &kp ENTER>;
 
             label = "POWERSHELL";
         };
