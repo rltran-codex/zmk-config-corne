@@ -2,7 +2,7 @@
 #include "zmk-helpers/key-labels/42.h"
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1250  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 45    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25    // default: 10
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
