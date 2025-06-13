@@ -190,6 +190,24 @@
 
             label = "CLIP_HISTORY";
         };
+
+        powershell: powershell {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN>,
+                <&macro_tap>,
+                <&kp R>,
+                <&macro_release>,
+                <&kp LEFT_WIN>,
+                <&macro_wait_time 50>,
+                <&kp P &kp O &kp W &kp E &kp R &kp S &kp H &kp E &kp L &kp L>,
+                <&macro_tap>,
+                <&kp ENTER>;
+
+            label = "POWERSHELL";
+        };
     };
 
     combos {
@@ -306,10 +324,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp ESCAPE  &kp Q           &kp W           &kp E                     &kp R         &kp T          &kp Y      &kp U                &kp I                      &kp O            &kp P               &kp BACKSPACE
-&kp TAB     &kp A           &hm LEFT_ALT S  &hm_shift_l LEFT_SHIFT D  &hm LCTRL F   &kp G          &kp H      &hm RIGHT_CONTROL J  &hm_shift_r RIGHT_SHIFT K  &hm RIGHT_ALT L  &kp SEMICOLON       &kp SQT
-&kp LCTRL   &hm LEFT_GUI Z  &kp X           &kp C                     &kp V         &kp B          &kp N      &kp M                &kp COMMA                  &kp DOT          &hm RIGHT_GUI FSLH  &kp RIGHT_SHIFT
-                                            &kp LGUI                  &lt 3 ESCAPE  &lt 1 SPACE    &lt 2 RET  &kp RIGHT_SHIFT      &kp LEFT_ALT
+&kp ESCAPE  &kp Q           &kp W           &kp E                     &kp R        &kp T          &kp Y      &kp U                &kp I                      &kp O            &kp P               &kp BACKSPACE
+&kp TAB     &kp A           &hm LEFT_ALT S  &hm_shift_l LEFT_SHIFT D  &hm LCTRL F  &kp G          &kp H      &hm RIGHT_CONTROL J  &hm_shift_r RIGHT_SHIFT K  &hm RIGHT_ALT L  &kp SEMICOLON       &kp SQT
+&kp LCTRL   &hm LEFT_GUI Z  &kp X           &kp C                     &kp V        &kp B          &kp N      &kp M                &kp COMMA                  &kp DOT          &hm RIGHT_GUI FSLH  &kp RIGHT_SHIFT
+                                            &kp LGUI                  &mo 3        &lt 1 SPACE    &lt 2 RET  &kp RIGHT_SHIFT      &kp LEFT_ALT
             >;
         };
 
@@ -350,19 +368,19 @@
         func {
             display-name = "func";
             bindings = <
-&trans     &mkp RCLK  &trans          &mmv MOVE_UP    &trans           &msc SCRL_UP      &vscode_left_editor  &vscode_right_editor  &trans      &trans  &kp F5   &kp F10
-&caps      &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &trans               &trans                &trans      &trans  &kp F11  &kp F12
-&mkp LCLK  &trans     &trans          &trans          &clip_history    &none             &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &kp C_MUTE  &trans  &kp F9   &trans
-                                      &kp INS         &trans           &trans            &trans               &trans                &trans
+&none      &mkp RCLK       &mmv MOVE_UP    &trans           &msc SCRL_UP    &trans    &vscode_left_editor  &vscode_right_editor  &trans       &trans  &kp F5   &kp F10
+&none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans    &trans               &trans                &trans       &trans  &kp F11  &kp F12
+&mkp LCLK  &trans          &trans          &trans           &trans          &trans    &trans               &trans                &trans       &trans  &kp F9   &trans
+                                           &kp INS          &trans          &trans    &trans               &clip_history         &powershell
             >;
         };
 
         SYS {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4  &kp F5            &kp F6             &kp F7           &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans  &studio_unlock    &trans             &trans           &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans            &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &bootloader  &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4  &kp F5            &kp F6             &kp F7           &kp F8      &kp F9  &kp F10      &kp F11
+&trans  &trans        &trans        &trans        &trans  &studio_unlock    &trans             &trans           &trans      &trans  &trans       &kp F12
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans            &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &trans  &bootloader  &trans
                                     &trans        &trans  &trans            &trans             &trans           &trans
             >;
         };
