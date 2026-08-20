@@ -305,6 +305,11 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <0 5 6 11 3 8 38 39>;
         };
+
+        btclear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <24 12 38 39 0>;
+        };
     };
 
     //
